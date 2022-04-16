@@ -67,8 +67,8 @@ CREATE TABLE song
 (
     song_id INT AUTO_INCREMENT PRIMARY KEY,
     name varchar(300),
-    album_id INT,
-    song_seconds varchar(300),
+    album_id INT NOT NULL,
+    song_seconds INT NOT NULL,
     FOREIGN key (album_id) REFERENCES album(album_id)
 );
 
@@ -146,7 +146,7 @@ CREATE TABLE history
 (
     user_id	INT,
     song_id	INT,
-    date_listened varchar(300),
+    date_listened DATETIME NOT NULL,
     FOREIGN key (user_id) REFERENCES users(user_id),
     FOREIGN key (song_id) REFERENCES song(song_id),
     CONSTRAINT PRIMARY KEY(user_id, song_id)
