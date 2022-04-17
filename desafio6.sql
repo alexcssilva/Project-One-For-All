@@ -5,4 +5,4 @@ SELECT
   ROUND(SUM(p.plans_price), 2) AS 'faturamento_total'
 FROM plans AS p
  INNER JOIN users AS u
-  ON p.plans_id = u.plans_id
+  ON p.plans_id = u.plans_id;
