@@ -10,15 +10,15 @@ CREATE TABLE plans
 (
     plans_id INT AUTO_INCREMENT PRIMARY KEY,
     plans varchar(300),
-    plans_price	varchar(300)
+    plans_price	DECIMAL(5, 2) NOT NULL
 );
 
 INSERT INTO plans (plans,plans_price)
 VALUES
     ('gratuito', '0'),
-    ('familiar', '7,99'),
-    ('universitário', '5,99'),
-    ('pessoal', '6,99');
+    ('familiar', '7.99'),
+    ('universitário', '5.99'),
+    ('pessoal', '6.99');
 
 -- Criando tabela Artist e inserindo dados
 
